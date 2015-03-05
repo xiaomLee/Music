@@ -1,0 +1,90 @@
+* {margin:0;padding:0}
+body {font-family:Tahoma, Geneva, sans-serif;font-size:100%;line-height:.9375em;color:#fff;position:relative;background:url(images/body-bg.gif) center top repeat-y}
+input, textarea, select {font-family:Tahoma, Geneva, sans-serif;font-size:1em}
+.fleft {float:left}
+.fright {float:right}
+.clear {clear:both}
+.col-1, .col-2, .col-3 {float:left}
+.alignright {text-align:right}
+.aligncenter {text-align:center}
+.wrapper {width:100%;overflow:hidden}
+.container {width:100%}
+p {margin-bottom:15px}
+/* GLOBAL */
+#main {width:910px;margin:0 auto;height:auto !important;height:100%;min-height:100%;position:relative}
+#header, #content, #footer {font-size:0.75em}
+.top-bg {background:url(images/bg-top.jpg) no-repeat center top;position:relative;min-height:100%;height:auto !important;height:100%}
+.bot-bg {background:url(images/bg-bottom.jpg) no-repeat center bottom;position:relative;min-height:100%;height:auto !important;height:100%}
+.tail-top {background:url(images/tail-top.gif) left top repeat-x #028ecc;min-height:100%;height:auto !important;height:100%}
+.tail-bottom {background:url(images/tail-bottom.gif) left bottom repeat-x;position:relative;min-height:100%;height:auto !important;height:100%}
+.tail-bg {background:url(images/bg-tail.jpg) center top repeat-y;position:relative;min-height:100%;height:auto !important;height:100%}
+.tail-right-top {background:url(images/tail-right.gif) right top repeat-x;position:absolute;height:550px;right:0;top:0;width:50%}
+.tail-right-bot {background:url(images/tail-right-bottom.gif) right bottom repeat-x;position:absolute;height:459px;right:0;bottom:0;width:50%}
+.tail-right {background:#0ab7e0;height:100%;position:absolute;right:0;top:0;width:50%}
+/* txt, links, lines, titles */
+a {color:#abe3fd;outline:none}
+a:hover{text-decoration:none}
+h1 {padding:28px 0 0 10px;font-size:3em;line-height:1em;float:left}
+h1 a {display:block;background:url(images/logo.jpg) no-repeat left top;width:237px;height:40px;text-indent:-9999px}
+h1 span {background:url(images/slogan.jpg) no-repeat left top;text-indent:-9999px;display:block;height:22px;width:437px}
+h2 {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:2.08em;line-height:1.1em;text-transform:uppercase;font-weight:normal;margin-bottom:23px}
+h3 {font-size:1em;padding:2px 0 0 0;margin-bottom:10px}
+/* header */
+#header {height:120px}
+#header .top-links {float:right;padding-top:37px}
+#header .top-links li {float:left}
+/* nav */
+#nav {float:left;width:209px;margin-right:40px;padding:40px 0 0 0;position:relative}
+#nav ul li {width:100%}
+#nav ul li a {display:block;background:url(images/nav-bg.png) no-repeat left top;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;width:209px;height:32px;line-height:32px;font-size:18px;text-transform:uppercase;color:#fff;text-decoration:none;text-indent:30px;margin-bottom:7px;position:relative;z-index:10}
+#nav ul li a:hover {color:#011032}
+.extra-img {position:absolute;top:316px;left:-11px}
+/* content */
+#content {float:left;width:661px;min-height:680px;height:auto !important;height:680px}
+#content {padding:40px 0}
+#content .section {padding:0 0 34px 0}
+/* list */
+ul {list-style:none}
+#content ul {padding-bottom:15px}
+#content ul li {font-weight:bold;padding-bottom:8px}
+#content ul li a {color:#fff}
+#content ul li ul {padding:10px 0 0 12px}
+#content ul li ul li {font-weight:normal}
+#content .items-list {padding:0}
+#content .items-list li {width:100%;overflow:hidden;padding-bottom:20px;font-weight:normal}
+#content .items-list li img {float:left;margin-right:20px}
+#content .articles {padding:0}
+#content .articles li {width:100%;overflow:hidden;padding-bottom:30px; font-weight:normal}
+#content .articles li img {float:left;margin-right:20px}
+#content .articles li a {color:#abe3fd}
+/* forms */
+input, select {vertical-align:middle;font-weight:normal}
+img {border:0;vertical-align:top;text-align:left}
+#contacts-form {clear:right;width:100%;overflow:hidden;padding:15px 0 0 0}
+#contacts-form fieldset {border:none;float:left}
+#contacts-form .field {clear:both}
+#contacts-form label {float:left;width:97px;line-height:20px;padding-bottom:5px;font-weight:bold}
+#contacts-form input {width:246px;padding:2px 0 2px 3px;background:#16acf1;border:1px solid #91dcfe;color:#fff}
+#contacts-form textarea {width:475px;height:293px;padding:2px 0 2px 3px;background:#16acf1;border:1px solid #91dcfe;color:#fff;margin-bottom:15px;overflow:auto}
+/* boxes */
+.box .left-top-corner {background:url(images/left-top-corner.png) no-repeat left top;padding-left:10px}
+.box .right-top-corner {background:url(images/right-top-corner.png) no-repeat right top;padding-right:10px}
+.box .border-top {background:url(images/border-top.png) left top repeat-x;height:10px;overflow:hidden;font-size:0;line-height:0}
+.box .border-left {background:url(images/border-side.png) left top repeat-y;padding-left:1px}
+.box .border-right {background:url(images/border-side.png) right top repeat-y;padding-right:1px}
+.box .inside {background:url(images/box-bg.png) left top;padding:14px 39px 23px 39px}
+.box .left-bot-corner {background:url(images/left-bot-corner.png) no-repeat left top;padding-left:10px}
+.box .right-bot-corner {background:url(images/right-bot-corner.png) no-repeat right top;padding-right:10px}
+.box .border-bot {background:url(images/border-bot.png) left top repeat-x;height:10px;overflow:hidden;font-size:0;line-height:0}
+.button {float:right;font-size:1.5em;line-height:1.1em;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;width:234px;text-align:center}
+.button span {display:block;background:url(images/button-left.png) no-repeat left top;padding-left:11px}
+.button span span {background:url(images/button-right.png) no-repeat right top;padding-right:12px;padding-left:0}
+.button span span a {display:block;background:url(images/button-bg.png) left top repeat-x;padding:6px;color:#fff;text-decoration:none;text-transform:uppercase}
+.button span span a:hover {color:#000}
+/* footer */
+#footer {height:80px;position:relative;margin:-80px auto 0 auto;width:910px}
+#footer {color:#acc3de}
+#footer .indent {padding:15px 0 0 249px}
+#footer a {color:#fff}
+#footer img {position:relative;top:-4px}
+#content .inner_copy {border:0;color:#f00;float:left;width:50%!important;margin:-202px 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:12px}
