@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php 
+session_start();
+if(!isset($_SESSION[login_user]))
+	header("location:error.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,18 +12,18 @@
 <!--
 body{background:url(images/top.jpg)}
 </style></head>
-
 <body>
 <?php 
 $loginUser=$_SESSION[login_user];
 ?>
+ </script>
 <table align="right" width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td width="150" class="STYLE7"><div><font size="2"><a href=" ../home.php" target="_blank">首页</a></font></div></td> 
           <td align="right"><table width="150" border="0" cellspacing="0" cellpadding="0" height="17">
           <tr>
             <td width="150" class="STYLE7"><div><font size="2"><a href="showInfo.php?userid=<?php echo $loginUser[userid]; ?>" target="rightFrame">个人信息</a></font></div></td>   
-            <td width="150"  class="STYLE7"><div><font size="2"><a href="login.php" target="_parent" >退出登录</a></font></div></td>
+            <td width="150"  class="STYLE7"><div><font size="2"><a href="logout.php" target="_parent"  >退出登录</a></font></div></td>
           </tr>
         </table></td>
         </tr>      

@@ -73,16 +73,16 @@ body {
         <li><a href="right.php" target="rightFrame">查看/删除管理员</a></li>
       </ul>
     </li>
-    <li> <a class="head">音乐管理</a>
-      <ul>
-        <li><a href="addMusic.php" target="rightFrame">添加音乐</a></li>
-        <li><a href="showMusic.php" target="rightFrame">查看/删除音乐</a></li>
-      </ul>
-    </li>
     <li> <a class="head">主题管理</a>
       <ul>
         <li><a href="addVol.php" target="rightFrame">添加主题</a></li>
          <li><a href="showVol.php" target="rightFrame">查看/删除主题</a></li>
+      </ul>
+    </li>
+    <li> <a class="head">音乐管理</a>
+      <ul>
+        <li><a href="addMusic.php" target="rightFrame">添加音乐</a></li>
+        <li><a href="showMusic.php" target="rightFrame">查看/删除音乐</a></li>
       </ul>
     </li>
    </ul>

@@ -1,5 +1,8 @@
 <?php
 session_start ();
+if(!isset($_SESSION[login_user]))
+	header("location:error.php");
+
 $loginUser = $_SESSION [loginuser];
 $datas = [ 
 		"username" => $_POST[username],
@@ -15,7 +18,7 @@ include '../dbutil/dbconfig.php';
 
 $db = new medoo ( $link_url );
 if ($db->insert( "users", $datas )){
-	echo'<meta http-equiv=\"refresh\" content="5;URL=main.php">';
-	echo "success";
-}
-	?>
+	echo "success...3秒后跳转到查询页";
+?>
+<meta http-equiv="refresh" content="3;URL=right.php">
+<?php }?>

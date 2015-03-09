@@ -14,37 +14,16 @@ $vols = $db->select ( "vol", "*" );
 	<table width="265" border="0" cellpadding="2" cellspacing="0"
 		align="center">
 		<tbody>
-			<tr>
-				<td><a target="_blank" href="http://jzpd.taobao.com/"><img
-						src="http://www.luoo.net/ad/jzpd.jpg" alt="" width="239"
-						height="81" /></a></td>
+			<tr height="200px">
+				<td/>
 			</tr>
-
+		<?php foreach ($vols as $vol){?>
 			<tr>
-				<td><a target="_blank" href="http://ywsoap.taobao.com/"><img
-						src="http://www.luoo.net/ad/yw.jpg" alt="" width="239" height="77" /></a></td>
+				<td><a target="" href="index.php?vol=<?php echo $vol[id];?>"><img
+						src="<?php echo $vol[image];?>" alt="" width="239"
+						height="81" /><br/>vol.<?php echo $vol[vol]. $vol[theme] ;?></a></td>
 			</tr>
-
-
-			<tr>
-				<td><a target="_blank"
-					href="http://www.nuandao.com/?utm_campaign=campaign1&utm_medium=banner&utm_source=luo&utm_content=265x84"><img
-						src="http://www.luoo.net/ad/nd.jpg" alt="Å¯µº" width="239"
-						height="84" /></a></td>
-			</tr>
-
-			<tr>
-
-				<td><a target="_blank" href="http://bensherman.taobao.com/"><img
-						src="http://www.luoo.net/ad/ylgs.jpg" alt="Ó¢Â×¹ÊÊÂ" width="239"
-						height="83" /></a></td>
-			</tr>
-			<tr>
-				<td><a target="_blank"
-					href="http://item.taobao.com/item.htm?spm=2013.1.w797257032.4.ETUZ8u&id=18020297053"><img
-						src="http://www.luoo.net/ad/muji.gif" alt="" width="239"
-						height="78" /></a></td>
-			</tr>
+		<?php }?>	
 		</tbody>
 	</table>
 	<table width="268" border="0">
@@ -58,15 +37,6 @@ $vols = $db->select ( "vol", "*" );
 			<td height="25">&nbsp;</td>
 		</tr>
 	</table>
-	<table width="240" border="0" align="center">
-<?php foreach ($vols as $vol){?>
-     <tr>
-			<td width="240"><div align="left">
-					<a href="index.php?vol=<?php echo $vol[id];?>"><font size="2.8">vol.<?php echo $vol[vol]. $vol[theme] ;?></a>
-				</div></td>
-		</tr>
- <?php }?>
-   </table>
 	<p>&nbsp;</p>
 </div>
 

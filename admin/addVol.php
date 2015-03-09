@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if(!isset($_SESSION[login_user]))
+	header("location:error.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -39,8 +44,8 @@ body {
 	width:360px;
 	height:40px;
 	z-index:8;
-	left: 67px;
-	top: -20px;
+	left: 10px;
+	top: -40px;
 }
 .STYLE5 {
 	font-family: "新宋体";
@@ -76,11 +81,11 @@ body {
 }
 #Layer8 {
 	position:absolute;
-	width:200px;
+	width:500px;
 	height:115px;
 	z-index:3;
-	left: 23px;
-	top: 56px;
+	left: 75px;
+	top: 70px;
 }
 #Layer9 {
 	position:absolute;
@@ -207,11 +212,10 @@ body {
 
 <body>
 <div id="Layer4">
-  <p><span class="STYLE5">欢迎加入</span><span class="STYLE7"> v</span><span class="STYLE6"><span class="STYLE3">oice音乐</span></span></p>
   <div class="STYLE9" id="Layer5">添加主题</div>
 </div>
 <form name="addvol" id="addvol" action="insertVol.php" method="post" enctype=multipart/form-data ">
-<div >
+<div id="Layer8" >
     <label><span class="STYLE10"><font size="2">主题编号:</font></span>
    <input type="text" name="vol" />
     </label>

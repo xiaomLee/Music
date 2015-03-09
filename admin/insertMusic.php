@@ -1,4 +1,7 @@
 <?php
+session_start ();
+if(!isset($_SESSION[login_user]))
+	header("location:error.php");
 include '../dbutil/dbconfig.php';
 include '../dbutil/medoo.php';
 if ($_FILES ["cdimage"] ["error"] > 0 || $_FILES ["url"] ["error"] > 0) {
@@ -26,11 +29,16 @@ if ($_FILES ["cdimage"] ["error"] > 0 || $_FILES ["url"] ["error"] > 0) {
 	} else {
 		move_uploaded_file ( $_FILES ["cdimage"] ["tmp_name"], "../uploads/images/" . $_FILES ["cdimage"] ["name"] );
 		move_uploaded_file ( $_FILES ["url"] ["tmp_name"], "../uploads/music/" . $_FILES ["url"] ["name"] );
-		if ($db->insert ( "music", $data ))
-			echo "添加成功";
-		else
-			echo "添加失败";
+		if ($db->insert ( "music", $data )){
+			echo "添加成功,3秒后跳转到查询页";
+		?>
+			<meta http-equiv="refresh" content="3;URL=showMusic.php">
+			<?php }
+			else{
+				echo "添加失败，3秒后返回添加页";
+			?>
+			<meta http-equiv="refresh" content="3;URL=addMusic.php">
+		<?php }
 	}
 }
-
 ?>

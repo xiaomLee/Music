@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php 
+session_start();
+if(!isset($_SESSION[login_user]))
+	header("location:error.php");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -45,15 +49,15 @@ body {
 </head>
 <body>
 <?php
-include "../inc/mysql.inc";
-include "../inc/myfunction.inc";
+include '../dbutil/medoo.php';
+include '../dbutil/dbconfig.php';
+
+$db = new medoo ( $link_url );
 $loginUser = $_SESSION ['login_user'];
-$aa = new mysql ();
-$query = "select * from users";
-$rst = $aa->excu ( $query );
+$users=$db->select("users", "*");
 // echo $rst;
 ?>
-<?php if($loginUser[username]=="xiaom"){?>
+<?php if($loginUser[username]=="xiaom"||$loginUser[username]=="admin"){?>
 <table width="100%" border="0" align="center" cellpadding="0"
 		cellspacing="0">
 		<tr>
@@ -114,7 +118,7 @@ $rst = $aa->excu ( $query );
 								<span class="STYLE10">基本操作</span>
 							</div></td>
 					</tr>
-					<?php while ( $user = $rst->fetch_assoc () ){ ?>
+					<?php foreach( $users as $user ){ ?>
 					<tr>
 						<div align="center"></div>
 						<td height="20" bgcolor="#00CCFF" class="STYLE19"><div
@@ -130,7 +134,7 @@ $rst = $aa->excu ( $query );
 						<td height="20" bgcolor="#00CCFF"><div align="center">
 								<span class="STYLE21"><a
 									href="showInfo.php?userid=<?php echo $user[userid] ?>">查看</a>&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="delAdmin?id=<?php echo $user[userid] ?>">删除</a></span>
+									<a href="delAdmin.php?id=<?php echo $user[userid] ?>">删除</a></span>
 							</div></td>
 					</tr>
 					<?php } ?> 
